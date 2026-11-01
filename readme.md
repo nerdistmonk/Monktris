@@ -27,16 +27,11 @@ An authentic, retro-faithful falling-block puzzle engine built in C11 using **SD
 
 ---
 
-## Prerequisites (Linux / Debian / Ubuntu)
+## Prerequisites (Linux)
 
 Install the required build tools, SDL3 development packages, and Vorbis libraries:
 
-```bash
-sudo apt update
-sudo apt install build-essential cmake pkg-config libvorbis-dev libogg-dev
-```
-
-*Note: Monktris targets **SDL3**. Ensure SDL3 development libraries (`libsdl3-dev` or source installation) are installed and discoverable by CMake.*
+Builds on GCC with cmake
 
 ---
 
@@ -47,20 +42,7 @@ sudo apt install build-essential cmake pkg-config libvorbis-dev libogg-dev
    cd Monktris
    ```
 
-2. Generate the build files:
-   ```bash
-   cmake -B build -DCMAKE_BUILD_TYPE=Release
-   ```
-
-3. Compile the executable:
-   ```bash
-   cmake --build build
-   ```
-
-4. Run the game:
-   ```bash
-   ./build/monktris
-   ```
+2. Run the build_release script
 
 *(The CMake build process automatically copies the `snd/` audio assets and `gamecontrollerdb.txt` directly to the `build/` directory.)*
 
